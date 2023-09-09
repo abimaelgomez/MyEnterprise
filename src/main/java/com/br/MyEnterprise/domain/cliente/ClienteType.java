@@ -1,6 +1,6 @@
 package com.br.MyEnterprise.domain.cliente;
 
-public enum Usertype {
+public enum ClienteType {
     CLIENTE,
     EMPRESA
 }
