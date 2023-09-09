@@ -1,6 +1,6 @@
 package com.br.MyEnterprise;
 
-import com.br.MyEnterprise.domain.cliente.ClienteModel;
+import com.br.MyEnterprise.domain.user.User;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ValidandoCpfTest {
     @Test
     void ValidandoCpfDeveriaSerTrueParaUmCpfValido(){
-        ClienteModel joaozinho = new ClienteModel();
+        User joaozinho = new User();
         boolean verificaCpfValido = joaozinho.validaCpf("444.727.188-55");
 
         assertEquals(true, verificaCpfValido);
@@ -16,7 +16,7 @@ class ValidandoCpfTest {
 
     @Test
     void ValidandoCpfDeveriaApontarTipoDeErroParaUmCpfInvalido(){
-        ClienteModel joaozinho = new ClienteModel();
+        User joaozinho = new User();
         boolean verificaCpfValido = joaozinho.validaCpf("441.111.111-11");
 
         assertEquals(true, verificaCpfValido);
