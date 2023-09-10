@@ -18,7 +18,7 @@ public class UserService {
 
     public void validateTransaction(User sender, BigDecimal amount) throws Exception {
         if (sender.getUserType() == UserType.EMPRESA) {
-            throw new Exception("Usuario do tipo empresa nao realiza transação ! ");
+            throw new Exception("Usuario do tipo empresa nao pode realizar transação ! ");
         }
 
         if (sender.getBalance().compareTo(amount) < 0) {
